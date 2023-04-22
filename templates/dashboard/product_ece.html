@@ -1,0 +1,28 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+{% include 'partials/nav.html' %}
+<!--Table-->
+<div class="container">
+  <div class="row my-4">
+    {% for item in items %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img class="card-img-top" src="{{ item.gallery1.url }}" alt="{{ item.name }}">
+            <div class="card-body">
+                <h5 class="card-title">Name : {{ item.name }}</h5>
+                <p class="card-text">Quantity : {{ item.quantity }}</p>
+                <p class="card-text">Category : {{ item.category }}</p>
+                <p class="card-text">Brand: {{ item.Brand }}</p>
+                <p class="card-text">Type : {{ item.Type }}</p>
+                <a href="{% url 'dashboard-product-update' item.id %}" class="btn btn-primary">Edit</a>
+                <a href="{% url 'dashboard-product-delete' item.id %}" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+
+
+{% endblock %}
+<!--End Table-->

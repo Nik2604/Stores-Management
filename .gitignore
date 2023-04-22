@@ -1,0 +1,4 @@
+asert/
+myenv
+**.pyc
+db.sqlite3

@@ -1,0 +1,30 @@
+{% extends 'partials/base.html' %}
+
+{% block title %} Product Add Page {% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'partials/nav.html' %}
+<div class="col-md-6 offset-md-3 border bg-white p-4">
+    {% for message in messages %}
+    {% if message %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+
+    </div>
+    
+    {% endif %}
+    {% endfor %}
+    <div class="border bg-white p-3">
+        <h4>Add Products</h4>
+        <hr>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <input class="btn btn-success btn-block" type="submit" value="Add Product">
+            <a class="btn btn-secondary btn-block" href="{% url 'dashboard-product' %}">Back</a>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

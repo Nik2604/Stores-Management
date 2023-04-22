@@ -1,0 +1,117 @@
+{% extends 'partials/base.html' %}
+{% block title %} Staff Page {% endblock %}
+{% block content %}
+{% include 'partials/topnav.html' %}
+
+<div class="container">
+    
+    <div class="row my-4">
+        <div class="col-md-12">
+        <center>
+            <div class="card mb-3">
+                <img class="card-img-top" src="http://127.0.0.1:8000/media/show_Images/electrical1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Electrical Products</h5>
+                  <p class="card-text ">Electrical products can be stored, edit and delete here</p>
+                  <a href="{% url 'dashboard-products-eee' %}" class="stretched-link">Go to Electrical Products</a>
+                  
+                </div>
+              </div>
+    
+    </div>
+</center>
+       </div>
+    
+
+</div>
+    
+<div class="container">
+    
+    <div class="row my-4">
+        <div class="col-md-12">
+        <center>
+            <div class="card mb-3">
+                <img class="card-img-top" src="http://127.0.0.1:8000/media/show_Images/electronics.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Electronics Products</h5>
+                  <p class="card-text ">Electronics products can be stored, edit and delete here</p>
+                  <a href="{% url 'dashboard-products-ece' %}" class="stretched-link">Go to Electronics Products</a>
+                  
+                </div>
+              </div>
+    
+    </div>
+</center>
+       </div>
+    
+
+</div>
+
+<div class="container">
+    
+    <div class="row my-4">
+        <div class="col-md-12">
+        <center>
+            <div class="card mb-3">
+                <img class="card-img-top" src="http://127.0.0.1:8000/media/show_Images/mechanical-engg.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Mechanical Products</h5>
+                  <p class="card-text ">Mechanical products can be stored, edit and delete here</p>
+                  <a href="{% url 'dashboard-products-mech' %}" class="stretched-link">Go to Mechanical Products</a>
+                  
+                </div>
+              </div>
+    
+    </div>
+</center>
+       </div>
+    
+
+</div>
+
+<div class="container">
+    
+    <div class="row my-4">
+        <div class="col-md-12">
+        <center>
+            <div class="card mb-3">
+                <img class="card-img-top" src="http://127.0.0.1:8000/media/show_Images/civil.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Civil Products</h5>
+                  <p class="card-text ">Civil products can be stored, edit and delete here</p>
+                  <a href="{% url 'dashboard-products-civil' %}" class="stretched-link">Go to Civil Products</a>
+                  
+                </div>
+              </div>
+    
+    </div>
+</center>
+       </div>
+    
+
+</div>
+
+<div class="container">
+    
+    <div class="row my-4">
+        <div class="col-md-12">
+        <center>
+            <div class="card mb-3">
+                <img class="card-img-top" src="http://127.0.0.1:8000/media/show_Images/cse.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Computer Science Products</h5>
+                  <p class="card-text ">Computer Science products can be stored, edit and delete here</p>
+                  <a href="{% url 'dashboard-products-cse' %}" class="stretched-link">Go to Computer Science Products</a>
+                  
+                </div>
+              </div>
+    
+    </div>
+</center>
+       </div>
+    
+       
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'partials/base.html' %}
+{% block title %} Staff Page {% endblock %}
+{% block content %}
+{% include 'partials/nav.html' %}
+
+
+    <!--Table-->
+    <div class="container">
+        <div class="row my-4">
+            {% for worker in workers %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Name : {{ worker.username }}</h5>
+                        <p class="card-text">Email : {{ worker.email }}</p>
+                        <p class="card-text">Department : {{ worker.profile.department }}</p>
+                        <p class="card-text">Phone No. : {{ worker.profile.phone }}</p>
+                        <a href="{% url 'dashboard-staff-detail' worker.id %}" class="btn btn-primary">View Full Details</a>
+            
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+
+    </div>
+
+
+
+    <!--End Table-->
+{% endblock %}
